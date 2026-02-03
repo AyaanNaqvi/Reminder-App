@@ -1,50 +1,26 @@
-# Welcome to your Expo app 👋
+# Reminder App (React Native)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A cross-platform mobile reminder application that allows users to create, edit, and manage reminders with scheduled notifications.
 
-## Get started
+The app is designed as a local-first, single-user application with no backend dependency. All reminder data is stored persistently on the device, and time-based notifications are scheduled using the device notification system.
 
-1. Install dependencies
+Tech Stack: React Native, Expo, JavaScript (ES6+), AsyncStorage, Expo Notifications
 
-   ```bash
-   npm install
-   ```
+Features:
+- Create, edit, and delete reminders
+- Persistent local storage using AsyncStorage
+- Time-based notification scheduling
+- State-driven UI updates using React hooks
+- Modular component structure for maintainability
 
-2. Start the app
+How It Works:
+- Reminders are stored locally on the device using AsyncStorage
+- Application state is synchronized with stored data on app launch
+- Notifications are scheduled based on reminder date and time
+- Editing a reminder updates both local storage and scheduled notifications
 
-   ```bash
-   npx expo start
-   ```
+Status:
+This project is a functional prototype focused on core reminder logic and notification handling. It is structured for easy extension with features such as categories, recurring reminders, or cloud sync.
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Note:
+This is a local-only application with no backend, authentication, or network communication.
