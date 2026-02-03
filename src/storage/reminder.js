@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const KEY = 'reminderskey'; // unique key to store everything
+const KEY = 'reminderskey'; 
  
 
 export async function loadReminders() {
