@@ -19,23 +19,22 @@ const edit= all.map(r=>r.id==id
 
 }
 export async function saveReminders(list) {
-  await AsyncStorage.setItem(KEY, JSON.stringify(list)); // convert list → JSON
+  await AsyncStorage.setItem(KEY, JSON.stringify(list)); 
 }
 
 
 export async function addReminder({text,datetime, notificationId}) {
-  const reminders = await loadReminders();                // load old ones
-  const newReminder = { id: Date.now().toString(), text, datetime,  notificationId,}; // make new one
+  const reminders = await loadReminders();                
+  const newReminder = { id: Date.now().toString(), text, datetime,  notificationId,}; 
   const updated = [newReminder, ...reminders];     
   
-  await saveReminders(updated);                            // save updated list
-  return updated;                                          // return so UI can update
-}
+  await saveReminders(updated);                            
+  return updated;                                         
 
 
 export async function deleteReminder(id) {
-  const reminders = await loadReminders();                 // load existing
-  const updated = reminders.filter(r => r.id !== id);      // keep all except deleted
-  await saveReminders(updated);                            // save new list
-  return updated;                                          // return so UI can refresh
+  const reminders = await loadReminders();                
+  const updated = reminders.filter(r => r.id !== id);     
+  await saveReminders(updated);                            
+  return updated;                                          
 }
