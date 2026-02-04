@@ -84,8 +84,8 @@ const notificationId = await Notifications.scheduleNotificationAsync({
   return (
     <View style={styles.container}>
      <ImageBackground
-  source={prr}
-  resizeMode="cover"
+
+
   style={styles.image}
 >
 
